@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.HelankaShoeMarket.controller.PlaceOrderFormController">
+   <children>
+      <Label graphicTextGap="20.0" layoutX="337.0" layoutY="34.0" prefHeight="46.0" prefWidth="354.0" text="Place Order Form ">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblorderid" layoutX="50.0" layoutY="111.0" prefHeight="37.0" prefWidth="133.0" text="Order Id" />
+      <Label fx:id="lblqty" layoutX="626.0" layoutY="226.0" prefHeight="37.0" prefWidth="65.0" text="Qty" />
+      <Label fx:id="lblqtyonhand" layoutX="448.0" layoutY="226.0" prefHeight="37.0" prefWidth="133.0" text="Qty On Hand" />
+      <Label fx:id="lblunitprice" layoutX="260.0" layoutY="220.0" prefHeight="37.0" prefWidth="133.0" text="Unit Price" />
+      <Label fx:id="lbldescription" layoutX="78.0" layoutY="220.0" prefHeight="37.0" prefWidth="133.0" text="Description" />
+      <Label fx:id="lblorderdate" layoutX="674.0" layoutY="122.0" prefHeight="37.0" prefWidth="107.0" text="Order Date" />
+      <Label fx:id="lblcustomername" layoutX="434.0" layoutY="122.0" prefHeight="37.0" prefWidth="133.0" text="Customer Name" />
+      <Label fx:id="lblcustomerid" layoutX="238.0" layoutY="122.0" prefHeight="37.0" prefWidth="133.0" text="Customer Id" />
+      <TableView fx:id="tblOrderCart" layoutX="73.0" layoutY="350.0" prefHeight="254.0" prefWidth="750.0">
+         <columns>
+            <TableColumn fx:id="colProductId" prefWidth="109.0" text="Product Id" />
+            <TableColumn fx:id="colDescription" prefWidth="157.0" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="81.0" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="172.0" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="112.0" text="Total" />
+            <TableColumn fx:id="colAction" prefWidth="115.0" text="Action" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnaddcart" layoutX="823.0" layoutY="279.0" onAction="#btnAddCartOnAction" prefHeight="37.0" prefWidth="116.0" style="-fx-background-color: black;" text="Add To Card" textFill="#d3d0d0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnplaceorder" layoutX="823.0" layoutY="625.0" onAction="#btnPlaceOrderOnAction" prefHeight="37.0" prefWidth="116.0" style="-fx-background-color: black;" text="Place Order" textFill="#ddd5d5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtqty" layoutX="703.0" layoutY="233.0" onAction="#txtQtyOnAction" prefHeight="24.0" prefWidth="84.0" />
+      <Label fx:id="lblproductid" layoutX="50.0" layoutY="279.0" prefHeight="37.0" prefWidth="84.0" text="product id" />
+      <JFXComboBox fx:id="cmbProductId" layoutX="134.0" layoutY="281.0" onAction="#cmbProductIdOnAction" prefHeight="33.0" prefWidth="183.0" />
+      <JFXButton buttonType="RAISED" layoutX="670.0" layoutY="627.0" onAction="#btnBackOnAction" prefHeight="33.0" prefWidth="66.0" style="-fx-background-color: #bdc3c7;" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbcustomerid" layoutX="213.0" layoutY="159.0" onAction="#cmbCustomerIdOnAction" prefHeight="33.0" prefWidth="183.0" />
+      <Label fx:id="lblnettotal" layoutX="61.0" layoutY="625.0" prefHeight="37.0" prefWidth="84.0" text="Net Total" />
+      <Label fx:id="lblstatus" layoutX="833.0" layoutY="159.0" prefHeight="33.0" prefWidth="84.0" text="Status" />
+      <Label fx:id="lblhandovereddate" layoutX="828.0" layoutY="104.0" prefHeight="37.0" prefWidth="107.0" text="Hand over date" />
+   </children>
+</AnchorPane>
